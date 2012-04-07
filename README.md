@@ -8,6 +8,4 @@ The driver is GPL v2, the firmware can be redistributed freely subject to the co
 
 To install:
 
-git clone git@github.com:celeduc/rt3572sta.git
-cd rt3572sta
-./install.bash
+    git clone git@github.com:celeduc/rt3572sta.git; cd rt3572sta; ./install.bash
