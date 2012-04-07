@@ -1158,8 +1158,8 @@ typedef struct usb_device_id USB_DEVICE_ID;
 #define RTUSB_URB_ALLOC_BUFFER(_dev, _size, _dma)	usb_alloc_coherent(_dev, _size, GFP_ATOMIC, _dma)
 #define RTUSB_URB_FREE_BUFFER(_dev, _size, _addr, _dma)	usb_free_coherent(_dev, _size, _addr, _dma)
 #else
-#define RTUSB_URB_ALLOC_BUFFER(_dev, _size, _dma)		usb_buffer_alloc(_dev, _size, GFP_ATOMIC, _dma)
-#define RTUSB_URB_FREE_BUFFER(_dev, _size, _addr, _dma)	usb_buffer_free(_dev, _size, _addr, _dma)
+#define RTUSB_URB_ALLOC_BUFFER(_dev, _size, _dma)		usb_alloc_coherent(_dev, _size, GFP_ATOMIC, _dma)
+#define RTUSB_URB_FREE_BUFFER(_dev, _size, _addr, _dma)	usb_free_coherent(_dev, _size, _addr, _dma)
 #endif
 #else
 #define RTUSB_URB_ALLOC_BUFFER(_dev, _size, _dma)	kmalloc(_size, GFP_ATOMIC)
